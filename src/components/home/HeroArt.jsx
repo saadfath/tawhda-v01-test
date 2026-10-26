@@ -51,7 +51,7 @@ export function HeroArt() {
 
             <StarOrnament className="relative my-5 size-10 text-gold/80" />
 
-            <p className="relative text-sm text-ivory/80">أول احتفال رسمي</p>
+            <p className="relative text-sm text-ivory/80">أول احتفال</p>
             <p className="relative mt-1 text-base font-bold text-white">
               السبت 31 أكتوبر 2026
             </p>

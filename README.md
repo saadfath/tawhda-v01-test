@@ -48,11 +48,14 @@ npm run dev                  # http://localhost:5173
 ### أوامر مفيدة
 
 ```bash
-npm run build     # بناء الإنتاج في dist/
-npm run preview   # معاينة حزمة الإنتاج محليًا
-npm run smoke     # اختبار دخان آلي (يتطلب Chromium)
-npm run lint      # oxlint
+npm run build       # بناء إنتاجي؛ يتطلب VITE_SUPABASE_URL وVITE_SUPABASE_ANON_KEY
+npm run build:demo  # بناء تجريبي محلي فقط (يتضمن مفاتيح الإجابات — لا تنشره علنًا)
+npm run preview     # معاينة حزمة الإنتاج محليًا
+npm run smoke       # اختبار دخان آلي (يتطلب Chromium)
+npm run lint        # oxlint
 ```
+
+`npm run build` **يرفض البناء** إذا كانت متغيرات Supabase ناقصة، حتى لا تُنشر نسخة تجريبية تحمل مفاتيح الإجابات. استخدم `npm run build:demo` محليًا فقط لاختبار الواجهة دون قاعدة بيانات.
 
 `npm run smoke` يحتاج متصفح Chromium. إذا لم يكن مثبتًا:
 
@@ -61,7 +64,7 @@ npx playwright install chromium
 # أو مرّر المسار: CHROME_PATH=/usr/bin/chromium npm run smoke
 ```
 
-شغّل `npm run preview` في طرفية أخرى قبل `npm run smoke` (الافتراضي `http://127.0.0.1:4173`).
+شغّل `npm run build:demo` ثم `npm run preview` في طرفية أخرى قبل `npm run smoke` (الافتراضي `http://127.0.0.1:4173`).
 
 ---
 
@@ -152,7 +155,9 @@ npx playwright install chromium
 
 | الاختبار | النتيجة |
 | --- | --- |
-| بناء الإنتاج `npm run build` | ✅ نجح |
+| البناء التجريبي `npm run build:demo` | ✅ نجح |
+| بناء إنتاجي بمتغيرات Supabase (قيم وهمية) | ✅ نجح، وحزمة الأسئلة التجريبية فارغة |
+| رفض `npm run build` بدون متغيرات Supabase | ✅ مقصود |
 | T1 الصفحة الرئيسية وعنوان h1 واحد | ✅ |
 | T2 التنقل إلى `/info` | ✅ |
 | قائمة المراجع (6 مصادر) | ✅ |

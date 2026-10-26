@@ -38,6 +38,9 @@ async function main() {
   // T2 — client-side navigation and active link.
   await page.getByRole('link', { name: 'عن العيد' }).first().click()
   await page.waitForURL('**/info')
+  await page
+    .getByRole('heading', { level: 1, name: /عن عيد الوحدة/ })
+    .waitFor()
   assert.equal(await page.locator('h1').count(), 1)
   assert.match(await page.locator('h1').innerText(), /عن عيد الوحدة/)
   pass('T2 navigation to /info works')

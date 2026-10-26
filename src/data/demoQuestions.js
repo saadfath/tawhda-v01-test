@@ -1,5 +1,7 @@
 const S1 =
   'https://maroc.ma/ar/%D8%A7%D9%84%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/sahb-aljlalt-yqrr-jl-31-aktwbr-mn-kl-snt-yda-wtnya-tht-asm-yd-alwhdt-blagh-mn-aldywan-almlky'
+const S1EN =
+  'https://maroc.ma/en/news/his-majesty-king-proclaims-october-31-unity-day-statement-royal-office'
 const S2B = 'https://media.un.org/avlibrary/en/asset/d348/d3489764'
 const S4 = 'https://www.maroc.ma/en/morocco/religious-and-national-holidays'
 
@@ -88,7 +90,7 @@ const demoQuestions = [
     category: 'symbols',
     display_order: 5,
     is_active: true,
-    source_url: S1,
+    source_url: S1EN,
     correct_option_id: 'a',
     explanation_ar:
       'ورد في البلاغ أن الاسم هو «Aid Al Wahda» (Unity Day)، وأيضًا «Fête de l’Unité» في النسخة الفرنسية.',
@@ -169,7 +171,7 @@ const demoQuestions = [
   },
   {
     id: 'a0000000-0000-4000-8000-000000000010',
-    question_ar: 'أي عيد وطني يأتي بعد عيد الوحدة في 6 نونبر؟',
+    question_ar: 'أي مناسبة وطنية تُخلَّد في 6 نونبر، بعد عيد الوحدة؟',
     options: [
       { id: 'a', ar: 'عيد الشباب' },
       { id: 'b', ar: 'عيد الشغل' },

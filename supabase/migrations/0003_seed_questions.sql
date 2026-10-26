@@ -43,7 +43,7 @@ values
     null,
     '[{"id":"a","ar":"Unity Day"},{"id":"b","ar":"Independence Day"},{"id":"c","ar":"Throne Day"},{"id":"d","ar":"Youth Day"}]'::jsonb,
     'symbols', 5, true,
-    'https://maroc.ma/ar/%D8%A7%D9%84%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/sahb-aljlalt-yqrr-jl-31-aktwbr-mn-kl-snt-yda-wtnya-tht-asm-yd-alwhdt-blagh-mn-aldywan-almlky'
+    'https://maroc.ma/en/news/his-majesty-king-proclaims-october-31-unity-day-statement-royal-office'
   ),
   (
     'a0000000-0000-4000-8000-000000000006',
@@ -79,7 +79,7 @@ values
   ),
   (
     'a0000000-0000-4000-8000-000000000010',
-    'أي عيد وطني يأتي بعد عيد الوحدة في 6 نونبر؟',
+    'أي مناسبة وطنية تُخلَّد في 6 نونبر، بعد عيد الوحدة؟',
     null,
     '[{"id":"a","ar":"عيد الشباب"},{"id":"b","ar":"عيد الشغل"},{"id":"c","ar":"ذكرى المسيرة الخضراء"},{"id":"d","ar":"ذكرى تقديم وثيقة الاستقلال"}]'::jsonb,
     'dates', 10, true,
